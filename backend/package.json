@@ -3,24 +3,35 @@
   "version": "0.1.0",
   "description": "Backend for Qlance - Qubic Micro-Freelance Marketplace",
   "main": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/server.ts",
+    "dev": "node --loader ts-node/esm src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["qubic", "blockchain", "freelance"],
-  "author": "Aamir",
+  "keywords": [
+    "qubic",
+    "blockchain",
+    "freelance",
+    "marketplace"
+  ],
+  "author": "Qlance Team",
   "license": "MIT",
   "dependencies": {
+    "@qubic-lib/qubic-ts-library": "^0.1.6",
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.5",
+    "@types/uuid": "^9.0.7",
     "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
