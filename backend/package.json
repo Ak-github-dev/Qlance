@@ -9,7 +9,10 @@
     "build": "tsc",
     "start": "node dist/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:tx": "node --loader ts-node/esm src/tests/transaction.test.ts"
+    "test:tx": "node --loader ts-node/esm src/tests/transaction.test.ts",
+    "test:wallet": "node --loader ts-node/esm src/tests/wallet.test.ts",
+    "test:contract": "node --loader ts-node/esm src/tests/contract.test.ts",
+    "test:e2e": "node --loader ts-node/esm src/tests/e2e-job-posting.test.ts"
   },
   "keywords": [
     "qubic",

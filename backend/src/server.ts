@@ -5,6 +5,9 @@ import healthRoutes from './routes/health.js'
 import jobsRoutes from './routes/jobs.js'
 import qubicHelper from './utils/qubicHelper.js'
 
+import walletRoutes from './routes/wallet.js'
+
+
 dotenv.config()
 
 const app: Express = express()
@@ -28,6 +31,10 @@ app.use('/health', healthRoutes)
 
 // Jobs API
 app.use('/api/jobs', jobsRoutes)
+
+// Wallet API
+app.use('/api/wallet', walletRoutes)
+
 
 // Root endpoint
 app.get('/', (req: Request, res: Response) => {
